@@ -1,0 +1,10 @@
+public class Draw {
+    public static void main(String[] args) {
+        for (int line = 0; line < 5; line++){
+            for (int n = 5 - line; n > 0; n--){
+                System.out.print("X");
+            }
+            System.out.println();
+        }
+    }
+}
