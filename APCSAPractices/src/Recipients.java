@@ -1,9 +1,9 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class Recipients {
 
     /** The list of lines in the mailing list */
-
     public List<String> lines;
 
     /** Constructor. Fill lines with mailing list data.
@@ -14,10 +14,8 @@ public class Recipients {
     * - Blank line separators in the mailing list are stored
     * as empty strings.
     */
-
     public Recipients() { 
-    /* implementation not shown */ 
-    
+        lines = new ArrayList<>();
     }   
 
     /** Postcondition: Returns the city contained in the cityZip
@@ -26,11 +24,6 @@ public class Recipients {
     * line of an address
     * @return the city substring contained in cityZip
     */
-
-    // String cityZip = "Ithaca, NY 14850"
-    // return city = "Ithaca"
-    // Loop until String cityZip is == ,
-
     public String extractCity(String cityZip) {
         String city = "";
         int i = 0;
@@ -43,11 +36,9 @@ public class Recipients {
 
     /** Precondition: The recipient name is the first line of each
     * label on the mailing list.
-
     * Postcondition: Prints a list of recipient names to console,
     * one per line.
     */
-
     public void printNames() {
         for (int i = 0; i < lines.size()-1; i++) {
             if (lines.get(i).equals("")) {
@@ -61,13 +52,12 @@ public class Recipients {
     * @param name a name in the lines ArrayList
     * @return the address of the recipient with the given name
     */
-
     public String getAddress(String name) {
         String address = "";
         for (int i = 0; i < lines.size()-1; i++) {
             if (lines.get(i).equals(name)) {
-            int k = i+1;
-            boolean end = true;
+                int k = i+1;
+                boolean end = true;
                 while (end) {
                     address += lines.get(k) + " ";
                     k++;
@@ -80,4 +70,3 @@ public class Recipients {
         return address;
     }
 }
-//Other methods are not shown.
