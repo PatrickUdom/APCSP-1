@@ -62,6 +62,8 @@ public class WordSet {
         }
     }
 
+// Need to do c (page: 430)
+
 //Other instance variables, constructors, and methods are not shown.
 
 }
